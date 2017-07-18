@@ -25,6 +25,7 @@
 <a href="/user/showAll">获取所有用户</a>
 <a href="/user/show/2">获取指定用户(URI模板)</a>
 <a href="/user/add/ddd/123">添加用户(URI模板)</a>
+<a href="/user/testRegExp/value.123">正则表达式(URI模板)</a>
 <a href="/user/showByHttpServletRequest?id=1">获取指定用户(HttpServletRequest)</a>
 <a href="/user/showByRequestParam?id=2">获取指定用户(RequestParam)</a>
 <a href="/user/showByCookie">获取Cookie中的数据(CookieView)</a>

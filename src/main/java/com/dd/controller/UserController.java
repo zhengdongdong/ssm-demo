@@ -77,7 +77,7 @@ public class UserController {
         return "fail";
     }
 
-    // 使用 URI 模板传参
+    // 使用 URI 模板传参 -- 注意:若@PathVariable("id") 这样写, 参数可随意起, 否则不能
     @RequestMapping("/show/{id}")
     public String showUser(@PathVariable Integer id) {
         if (id == null) id = 0;
@@ -103,6 +103,13 @@ public class UserController {
         }
         logger.error("insert error " + username + ", " + password);
         return "fail";
+    }
+
+    // 正则
+    @RequestMapping(value = "/testRegExp/{val:[a-z]+}.{num:[\\d]+}")
+    public String reg(@PathVariable String val, @PathVariable String num) {
+        logger.info("val : " + val + " ,  num : " + num);
+        return "success";
     }
 
     // HttpServletRequest 获取传参
